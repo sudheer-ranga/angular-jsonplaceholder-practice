@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row">
+  <div class="col col-md-10 mx-auto">
+    <h3>All Posts</h3>
+    <div class="border-bottom mb-4"></div>
+
+    <div *ngIf="isLoading">
+      <h3 class="text-center">Loading posts...</h3>
+    </div>
+    
+    <div *ngIf="!isLoading">
+      <div *ngIf="posts.length > 0">
+        <div *ngFor="let post of posts">
+          <app-post [post]="post"></app-post>
+        </div>
+      </div>
+
+      <div *ngIf="posts.length === 0">
+        <p>No Posts</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
