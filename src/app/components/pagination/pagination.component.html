@@ -1,5 +1,9 @@
-<nav aria-label="Page Navigation">
-  <ul class="pagination">
-    <li *ngFor="let page of totalPages" (click)="onPageChange(page)" class="page-item" [ngClass]="{'active': (currentPage === page)}"><span class="page-link">{{ page }}</span></li>
-  </ul>
-</nav>
+<div class="row">
+  <div class="col col-md-8 mx-auto">
+    <nav aria-label="Page Navigation">
+      <ul class="pagination">
+        <li *ngFor="let page of totalPages" (click)="onPageChange(page)" class="page-item" [ngClass]="{'active': (currentPage === page)}"><span class="page-link">{{ page }}</span></li>
+      </ul>
+    </nav>
+  </div>
+</div>
