@@ -1,4 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <app-posts></app-posts>
+  <app-posts [posts]="currentPosts"></app-posts>
+  <app-pagination [totalPages]="totalPages" [currentPage]="currentPage" (paginate)="onPaginate($event)"></app-pagination>
 </div>

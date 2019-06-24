@@ -1,4 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-  <p>Hello</p>
-</div>
+<nav aria-label="Page Navigation">
+  <ul class="pagination">
+    <li *ngFor="let page of totalPages" (click)="onPageChange(page)" class="page-item" [ngClass]="{'active': (currentPage === page)}"><span class="page-link">{{ page }}</span></li>
+  </ul>
+</nav>
